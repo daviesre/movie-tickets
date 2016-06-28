@@ -49,10 +49,11 @@ $(function() {
     testMovie.adjustedPrice();
 
     console.log(testMovie);
-    $("span#ticketAge").text(testMovie.custAge);
-    $("span#ticketTime").text(testMovie.movieTime);
-    $("span#ticketPrice").text(testMovie.price);
-
-    $("#output").show();
+    $("#output").fadeOut("slow", function() {
+      $("span#ticketAge").text(testMovie.custAge);
+      $("span#ticketTime").text(testMovie.movieTime);
+      $("span#ticketPrice").text(testMovie.price);
+    });
+    $("#output").fadeIn("slow");
   });
 });

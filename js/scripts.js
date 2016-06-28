@@ -47,7 +47,12 @@ $(function() {
 
     var testMovie = new Ticket(movieName, ageCustom, timeEquals);
     testMovie.adjustedPrice();
-    
+
     console.log(testMovie);
+    $("span#ticketAge").text(testMovie.custAge);
+    $("span#ticketTime").text(testMovie.movieTime);
+    $("span#ticketPrice").text(testMovie.price);
+
+    $("#output").show();
   });
 });

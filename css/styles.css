@@ -5,3 +5,7 @@
 .select {
   padding: 20px;
 }
+
+#output {
+  display:none;
+}

@@ -8,14 +8,15 @@ function Ticket(name, age, time) {
 Ticket.prototype.adjustedPrice = function() {
   if (this.custAge === "Senior" || this.custAge === "Child") {
     this.price += 1;
-    console.log(this.price);
+  }
+  if (this.movieName === 1) {
+    this.price += 2;
+  }
+  if (this.movieTime === "prime") {
+    this.price += 3;
   }
   return this.price;
 }
-
-//TEST DATA
-
-
 
 $(function() {
   $("#movie-titles").on('change', (function() {
@@ -46,6 +47,7 @@ $(function() {
 
     var testMovie = new Ticket(movieName, ageCustom, timeEquals);
     testMovie.adjustedPrice();
+    
     console.log(testMovie);
   });
 });
